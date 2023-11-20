@@ -10,12 +10,12 @@ const secret="aoksnflkandsoglskdlksdngol"
 app.use(cors( {credentials:true,origin:"http://localhost:3000"}));
 
 function jwtcheck(req,res){
-    const token=req.cookies.token;
+    // const token=req.cookies.token;
     
-    jwt.verify(token,secret,{},(err,info)=>{
-        if (err) throw err;
-        res.json(info);
-    })
+    // jwt.verify(token,secret,{},(err,info)=>{
+    //     if (err) throw err;
+    //     res.json(info);
+    // })
 }
 
 module.exports={jwtcheck};

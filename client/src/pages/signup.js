@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link, json } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 function Signuppage() {
+    const navigate=useNavigate();
     const [username,setusername]=useState(``);
     const [password,setpassword]=useState(``);
 
@@ -16,7 +18,7 @@ function Signuppage() {
             });
             if (response.status ===200){
                 alert("successfull")
-                console.log(response)
+                navigate("/")
             }
             else if (response.status){alert("Registration failed")}
         } catch (error) {

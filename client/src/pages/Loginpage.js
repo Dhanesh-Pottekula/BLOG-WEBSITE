@@ -21,7 +21,7 @@ function Loginpage() {
                 credentials:"include",
             });
             if (response.ok){
-                navigate("/");
+                navigate("/home");
                 alert("Loged in")
             }
             else{alert(" not logged in");}

@@ -9,12 +9,14 @@ import Indexpage from './pages/Indexpage';
 import Loginpage from './pages/Loginpage';
 import Signuppage from './pages/signup';
 import Newpost from './pages/newpost';
+import Postpage from './pages/postpage';
 
 function App() {
   return (
     <Routes>
         <Route path="/" element={<Layout/>}>
-          <Route index element= {<Indexpage />}/>
+        <Route index element= {<Loginpage />}/>
+          <Route path="/home" element= {<Indexpage />}/>
 
           <Route path='/login' element={
             <Loginpage/>
@@ -24,6 +26,9 @@ function App() {
           }/>
           <Route path='/newpost' element={
             <Newpost/>
+          }/>
+          <Route path='/post/:id' element={
+            < Postpage/>
           }/>
 
           
